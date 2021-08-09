@@ -1,0 +1,62 @@
+body {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header, footer, div {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: red;
+}
+.content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 200px;
+}
+
+.aside {
+    width: 20%;
+}
+
+.center {
+    width: 60%;
+    background-color: blue;
+}
+
+.left {
+    background-color: green;
+}
+
+.right {
+    background-color: pink;
+}
+
+footer {
+    width: 100%;
+    background-color: violet;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .center {order: 0; width: 60%;}
+    .right {order: 1; width: 40%;}
+    .left {order: 2; width: 100%;}
+    .center, .right, .left {min-height: 200px;}
+}
+
+@media only screen and (max-width: 767px) {
+    .center {order: 0;}
+    .right {order: 2;}
+    .left {order: 1;}
+    .center, .right, .left {width: 100%; min-height: 100px;}
+}
